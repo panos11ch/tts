@@ -3,16 +3,15 @@ services:
   tts:
     image: nomorelies/tts:v1.0
     expose:
-      
-port: 5002
-      as: 80
-      to:
-global: true
-command:
-bash
-"-c"
-args:
-"python3 TTS/server/server.py --model_name tts_models/en/vctk/vits --use_cuda true"
+      - port: 5002
+        as: 80
+        to:
+          - global: true
+    command:
+      - bash
+      - "-c"
+    args:
+      - "python3 TTS/server/server.py --model_name tts_models/en/vctk/vits --use_cuda true"
 
 profiles:
   compute:
@@ -23,19 +22,18 @@ profiles:
         memory:
           size: 8Gi
         storage:
-          
-size: 16Gi
-      gpu:
-        units: 1
-        attributes:
-          vendor:
-            nvidia:
-placement:
-  akash:
-    pricing:
-      tts:
-        denom: uakt
-        amount: 100000
+          - size: 16Gi
+        gpu:
+          units: 1
+          attributes:
+            vendor:
+              nvidia:
+  placement:
+    akash:
+      pricing:
+        tts:
+          denom: uakt
+          amount: 100000
 deployment:
   tts:
     akash:
