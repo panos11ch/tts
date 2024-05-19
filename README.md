@@ -3,6 +3,9 @@ Project for "Build a deploy a Text-to-speech solution on Akash Network " task
 
 ## Demo
 
+https://github.com/panos11ch/tts/assets/170241027/c838f48e-97f2-4358-9a36-7445d1067511
+
+
 ## Guide
 
 - Connect your wallet
