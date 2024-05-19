@@ -8,7 +8,7 @@ Project for "Build a deploy a Text-to-speech solution on Akash Network " task
 - Connect your wallet
 - Press the deploy button
 - Select "Build your template"
-- Select YAML and paste the deploy_cpu.yaml of deploy_cpu.yaml in prompt
+- Select YAML and paste the deploy_cpu.yaml or deploy_cpu.yaml in prompt
 - Press "Create Deployment"
 - Accept transaction
 - Review bids and select provider
